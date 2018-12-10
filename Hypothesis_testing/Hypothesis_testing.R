@@ -88,10 +88,16 @@ qqline(chick_weight)
 shapiro.test(chick_weight)
 
 
-?qnorm()
-
-
-
+# P Values
+' Test:               Compare our p.value to alpha.
+  To sided Test:      2 * (1 - pnorm(xbar, mean, sd = (sigma.2 / sqrt(n))))
+'
+rm(list = ls())
+a <- 5
+s <- 2
+n <- 20
+xbar <- 7
+p.value <- 2 * (1-pnorm(xbar, mean = a, sd = (s/sqrt(20))))
 
 
 
