@@ -85,6 +85,31 @@ dumber(1)                 # dumber() take one input 'x' and returns x+1.
 
 
 
+# Graphics --------------------------------------------------------------
+'Types:          There are three types of plotting functions.  High, low and dynamic. '
+
+
+x11()                     # Starts the graphical driver.  see options under function. 
+help(x11)
+x11(width = 10, height = 10, title = 'Window System Graphics')
+
+# High Level
+'Use plot(), pairs(), coplot(), hist(), perspective()'
+
+x <- runif(20); y <- runif(20); plot(x,y)
+
+w <- 1; y <- 2; z <- 3; perspective(w,y,z)       # Multi dimension plotting. 
+
+# Low Level
+'Allows you to minipulate existing graphs'
+lines(x, y)              # Should see that lines have now been drawn between each point. 
+
+
+# Interactive plotting
+' locator() and identify():      Find specific datapoints in a plot'
+
+
+
 
 
 
