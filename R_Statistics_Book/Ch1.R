@@ -113,6 +113,53 @@ y <- x*2
 # Subtraction
 x - y
 
+# Character Vectors 
+
+'Concat Strings w/ paste()'
+s.1 <- 'Today is'
+s.2 <- 'a good day'
+s.3 <- 'to code'
+s.4 <- paste(s.1, s.2, s.3)
+s.4
+mode(s.4)
+
+'Concat Strings, change separate from "" to other'
+s.1 <- 'Today is'
+s.2 <- 'a good day'
+s.3 <- 'to code'
+s.4 <- paste(s.1, s.2, s.3, sep = '_')
+s.4
+mode(s.4)
+
+# Create one vector from indexing another
+
+x <- runif(20, min = 10, max = 20)
+y <- c(x[1], x[2])
+y                                 # new vector
+
+# Identify nan values
+
+x <- c(1,2,3,NA, 4, NA, 5)
+i <- is.na(x)                          # returns a vector with logical values. 
+                                       # if na, then = TRUE.  so !i is the opposite or non na values. 
+x[!i]                                  # returns a vector of non-na values. 
+
+
+# Create an Index for two vectors (creates something similar to a dataframe)
+x <- c(1,2,3)
+y <- c(3,4,5)
+names(x) <- c('A. Smith', 'B. Smith', 'C. Smith')     # function names() names the elements of x. 
+c.bind <- cbind(x,y)                                  # cbind() does something called 'column bind'
+mode(c.bind)        
+c.bind['A. Smith']                                    # Now we can retreive row values by calling the index. 
+
+# Types of None Values
+'NaN            Not available Number.  Division by zero. 
+ Na             Not available, which is used to designate missind data. 
+ Inf            Value of infinity. Inf is a number. 
+'
+
+
 
 
 
@@ -122,6 +169,10 @@ x <- 0:10
 length(x)                     # returns length of vector
 sum(x)
 mean(x)
+
+
+
+
 
 
 
