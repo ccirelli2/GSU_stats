@@ -66,10 +66,42 @@ l$letter                    # access attribute.
 
 
 
-# Dataframes
+### Dataframes---------------------------------------------------
+composers = c('Sibelius', 'Wagner', 'Shostakovitch')
+grandiose = c(1,3,2)
+df_music = data.frame(composers, grandiose)
+df_music
+
+# Coerce Data
+as.data.frame(matrix(1:24, nrow = 4, ncol = 6))  # Coerce data into dataframe with as.data.frame
+
+# Refer to columns
+df_music$composers        # By Name
+df_music[, 1]             # By index
+df_music[, 'composers']   # By name - index
+
+# Data Organization
+univariate = 'data that describe or measure a single attribute'
+Bivariate = 'data represented in pairs'
+Multivariate = 'data are composed fo a set of observations on objects.'
+
+data("airquality")
+head(airquality)        # print head of dataframe
+names(airquality)       # call column names
 
 
+### Import & Export of Data ----------------------------------------------------
 
+getwd()
+setwd('home/ccirelli2/Desktop')
+complaints_2019_01_28_19_55$Product    # loaded via gui. 
+
+
+# Data Connections
+install.packages("RODBC")
+installed.packages()
+
+# Connect to MySQL
 
 
 
