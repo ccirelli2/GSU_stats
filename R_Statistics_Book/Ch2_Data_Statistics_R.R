@@ -130,11 +130,37 @@ l.n.union = union(letters, numbers)
 l.n.union
 
 
-# String Operations
+# String Operations ----------------------------------------------------------------
 
+# Substr()
 string.1 = 'Today is a good day to code'
 string.2 = substr(string.1, 1, 2)           # returns the partial of a string.  syntax substr(string, start, stop)
 string.3 = substr(string.1, 1, 5)           # note that R indexing starts from 1 and not 0 like with Python. 
+
+# Concatenation w/ paste()
+string.4 = paste('Today', 'is', 'a', 'good', 'day', 'to', 'code', sep = '-')
+string.4
+
+# Convert to Upper and Lowercase
+string.4.upper = toupper(string.4)
+string.4.lower = tolower(string.4)
+
+# Grouping Data in a DataFrame by Column
+install.packages("sqldf")                   # R package for executing SQL select statements.  syntax looks weird. 
+
+
+
+# dplyr Package
+rm(list= ls())
+library(dbplyr)
+
+sales.1 = c(100, 200, 120, 1, 400, 200, 342, 2)
+groups.1 = c('A', 'B', 'A', 'C', 'A', 'C', 'E', 'W')
+df = data.frame(sales.1, groups.1)
+df
+documentation = 'https://datacarpentry.org/R-genomics/04-dplyr.html'
+
+
 
 
 
