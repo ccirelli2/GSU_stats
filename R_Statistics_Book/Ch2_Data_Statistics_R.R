@@ -102,8 +102,5 @@ install.packages("RODBC")
 installed.packages()
 
 # Connect to MySQL
-
-
-
-
+install.packages("RMySQL")
 
