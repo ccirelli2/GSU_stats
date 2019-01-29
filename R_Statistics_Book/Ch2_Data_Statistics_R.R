@@ -101,6 +101,41 @@ complaints_2019_01_28_19_55$Product    # loaded via gui.
 install.packages("RODBC")
 installed.packages()
 
-# Connect to MySQL
+# Connect to MySQL---------------------------------------------------------------
 install.packages("RMySQL")
+library(RMySQL)
+mydb = dbConnect(MySQL(), user='root', password='root', host = 'root')  # Failes to connect.
+
+# Stack
+
+?stack()
+require(stats)
+pg = unstack(PlantGrowth)
+pg                         # pg has three columns, ctlr, trt1, trt2, all of which have numerical values. No row names. 
+stack(pg)                  # stack(pg) returns two columns, one with all of the numerical values and another with the col labels from above. 
+
+
+
+# Bind, Merge, Union --------------------------------------------------------
+
+letters = c('A', 'B', 'C', 'D')
+numbers = c(1,2,3,4)
+letters.numbers = cbind(letters, '|' = '|', numbers)
+letters.numbers            # Note the output and how the columns are split with "|"
+
+l.n.merged = merge(letters, numbers)
+l.n.merged
+
+l.n.union = union(letters, numbers)
+l.n.union
+
+
+# String Operations
+
+string.1 = 'Today is a good day to code'
+string.2 = substr(string.1, 1, 2)           # returns the partial of a string.  syntax substr(string, start, stop)
+string.3 = substr(string.1, 1, 5)           # note that R indexing starts from 1 and not 0 like with Python. 
+
+
+
 
