@@ -2,12 +2,14 @@
 
 'Descroption:        Modeling a binary response variable. 
 
- Function:            glm(function, data = , family = binomial)
- Probability          Scale is not continous as we only have a probability for each x. 
- odds (y_hat):        y_hat / 1-y_hat = exp (b0 + b1*x)
+  Function:            glm(function, data = , family = binomial)
+  Probability          Scale is not continous as we only have a probability for each x. 
+  odds (y_hat):        y_hat / 1-y_hat = exp (b0 + b1*x)
+  glm                  used to fit genera linearized models
 
 
 '
+
 rm(list = ls())
 
 # Create a Logistic Regression Model
